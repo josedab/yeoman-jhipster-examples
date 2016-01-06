@@ -1,0 +1,18 @@
+eventmanager-elasticsearch:
+  container_name: eventmanager-elasticsearch
+  image: elasticsearch:1.7.3
+  # volumes:
+  #   - ~/volumes/jhipster/eventmanager/elasticsearch/:/usr/share/elasticsearch/data/
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+eventmanager-postgresql:
+  container_name: eventmanager-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/eventmanager/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=eventmanager
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
