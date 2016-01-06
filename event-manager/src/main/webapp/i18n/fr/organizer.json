@@ -1,0 +1,25 @@
+{
+    "eventmanagerApp": {
+        "organizer" : {
+            "home": {
+                "title": "Organizers",
+                "createLabel": "Créer un nouveau Organizer",
+                "createOrEditLabel": "Créer ou éditer un Organizer"
+            },
+            "created": "Un nouveau Organizer a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Organizer avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Organizer avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Organizer {{ id }} ?"
+            },
+            "detail": {
+                "title": "Organizer"
+            },
+            "name": "Name",
+            "title": "Title",
+            "description": "Description",
+            "event": "Event"
+        }
+    }
+}
+
