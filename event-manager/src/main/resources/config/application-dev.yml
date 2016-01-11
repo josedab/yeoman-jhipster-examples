@@ -21,9 +21,9 @@ spring:
     datasource:
         driver-class-name: org.postgresql.ds.PGSimpleDataSource
         url: jdbc:postgresql://localhost:5432/eventmanager
-        name:
+        name: eventmanager
         username: eventmanager
-        password:
+        password: eventmanager
     jpa:
         database-platform: com.josedab.eventmanager.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL

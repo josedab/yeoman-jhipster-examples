@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="eventmanagerApp.event.detail.title">Event</span> {{event.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="eventmanagerApp.event.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{event.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="eventmanagerApp.event.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{event.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="eventmanagerApp.event.address">Address</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{event.address}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="eventmanagerApp.event.date">Date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{event.date | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="eventmanagerApp.event.organizer">organizer</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="organizer.detail({id:event.organizer.id})">{{event.organizer.name}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
