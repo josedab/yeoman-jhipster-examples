@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "videostore",
+    "packageName": "com.josedab.videostore",
+    "packageFolder": "com/josedab/videostore",
+    "authenticationType": "oauth2",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "661b6344797e9153324f597f89793a0b4b7a8527",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

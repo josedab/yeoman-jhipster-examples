@@ -1,0 +1,10 @@
+videostore-postgresql:
+  container_name: videostore-postgresql
+  image: postgres:9.4.5
+  # volumes:
+  #   - ~/volumes/jhipster/videostore/postgresql/:/var/lib/postgresql/
+  environment:
+    - POSTGRES_USER=videostore
+    - POSTGRES_PASSWORD=
+  ports:
+    - "5432:5432"
