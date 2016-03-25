@@ -1,0 +1,12 @@
+version: '2'
+services:
+    socialprofile-postgresql:
+        container_name: socialprofile-postgresql
+        image: postgres:9.5.1
+        # volumes:
+        #     - ~/volumes/jhipster/socialprofile/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=socialprofile
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
