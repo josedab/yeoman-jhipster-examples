@@ -1,0 +1,30 @@
+version: '2'
+services:
+    videostore-cassandra:
+        container_name: videostore-cassandra
+        image: cassandra:2.2.5
+        # volumes:
+        #     - ~/volumes/jhipster/videostore/cassandra/:/var/lib/cassandra/data
+        ports:
+            - 7000:7000
+            - 7001:7001
+            - 7199:7199
+            - 9042:9042
+            - 9160:9160
+    videostore-cassandra-node:
+        image: cassandra:2.2.5
+        links:
+            - videostore-cassandra:seed
+        environment:
+            - CASSANDRA_SEEDS=seed
+    videostore-cassandra-migration:
+        container_name: videostore-cassandra-migration
+        links:
+            - videostore-cassandra
+        environment:
+            - CASSANDRA_CONTACT_POINT=videostore-cassandra
+        build:
+            context: .
+            dockerfile: cassandra/Cassandra.Dockerfile
+        volumes:
+            - ../resources/config/cql:/cql:ro
